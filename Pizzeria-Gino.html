@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Gino - La vera pizza artigianale</title>
+    <style>
+        /* STILI GENERALI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* INTESTAZIONE (HERO) */
+        .hero {
+            background-color: #d32f2f; /* Colore rosso pizzeria */
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background-color: #ffca28;
+            color: #333;
+            padding: 12px 25px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #ffb300;
+        }
+
+        /* SEZIONI GENERALI */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            color: #d32f2f;
+        }
+
+        /* CHI SIAMO */
+        .chi-siamo {
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* MENU - GRIGLIA PIZZE */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .pizza-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .pizza-card:hover {
+            transform: translateY(-5px);
+        }
+        .pizza-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #ddd; 
+        }
+        .pizza-info {
+            padding: 20px;
+        }
+        .pizza-nome-prezzo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .pizza-nome-prezzo h3 {
+            font-size: 1.4em;
+        }
+        .pizza-prezzo {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        .pizza-ingredienti {
+            color: #666;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        /* FOOTER / CONTATTI */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- INTESTAZIONE -->
+    <header class="hero">
+        <h1>Pizzeria Gino</h1>
+        <p>La vera pizza artigianale, cotta a legna.</p>
+        <a href="#menu" class="btn">Guarda il Menù</a>
+        <a href="tel:+390123456789" class="btn">Chiama per asporto</a>
+    </header>
+
+    <!-- CHI SIAMO -->
+    <section class="section chi-siamo">
+        <h2 class="section-title">La Nostra Storia</h2>
+        <p>Da oltre 20 anni sforniamo pizze con passione, utilizzando solo ingredienti freschi, farine selezionate e una lievitazione lenta di 48 ore. Il nostro forno a legna fa il resto della magia.</p>
+    </section>
+
+    <!-- MENU PIZZE -->
+    <section id="menu" class="section">
+        <h2 class="section-title">Il Nostro Menù</h2>
+        
+        <div class="menu-grid">
+            <!-- Pizza 1 -->
+            <div class="pizza-card">
+                <img src="margherita.jpg" alt="Pizza Margherita" class="pizza-img">
+                <div class="pizza-info">
+                    <div class="pizza-nome-prezzo">
+                        <h3>Margherita</h3>
+                        <span class="pizza-prezzo">€ 6,00</span>
+                    </div>
+                    <p class="pizza-ingredienti">Salsa di pomodoro San Marzano, fiordilatte, basilico fresco, olio EVO.</p>
+                </div>
+            </div>
+
+            <!-- Pizza 2 -->
+            <div class="pizza-card">
+                <img src="diavola.jpg" alt="Pizza Diavola" class="pizza-img">
+                <div class="pizza-info">
+                    <div class="pizza-nome-prezzo">
+                        <h3>Diavola</h3>
+                        <span class="pizza-prezzo">€ 7,50</span>
+                    </div>
+                    <p class="pizza-ingredienti">Salsa di pomodoro, fiordilatte, spianata calabra piccante.</p>
+                </div>
+            </div>
+
+            <!-- Pizza 3 -->
+            <div class="pizza-card">
+                <img src="capricciosa.jpg" alt="Pizza Capricciosa" class="pizza-img">
+                <div class="pizza-info">
+                    <div class="pizza-nome-prezzo">
+                        <h3>Capricciosa</h3>
+                        <span class="pizza-prezzo">€ 8,50</span>
+                    </div>
+                    <p class="pizza-ingredienti">Salsa di pomodoro, fiordilatte, prosciutto cotto, funghi, carciofini, olive nere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTATTI -->
+    <footer class="footer">
+        <h2 style="margin-bottom: 20px; color: #ffca28;">Vieni a trovarci</h2>
+        <p><strong>Indirizzo:</strong> Via Roma 123, 00100 Città</p>
+        <p><strong>Telefono:</strong> +39 012 345 6789</p>
+        <p><strong>Orari:</strong> Martedì - Domenica: 18:30 - 23:30 | Lunedì: Chiuso</p>
+    </footer>
+
+</body>
+</html>
